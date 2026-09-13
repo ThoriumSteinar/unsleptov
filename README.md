@@ -1,18 +1,23 @@
 # unsleptov
 
-Portfolio recreation of a Manchester restaurant site — cream header, booking card, grill gallery, peach footer.
+Кибер/техно портфолио fullstack-разработчика.
 
-**Site:** https://thoriumsteinar.github.io/unsleptov/
+**Сайт:** https://thoriumsteinar.github.io/unsleptov/
 
-## Locally
+## Локально
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open the Vite address (usually `http://localhost:5173`).
+Открой адрес Vite (обычно `http://localhost:5173`).
 
-## Pages
+## Что внутри
 
-Home with a reservation card, à la carte / drinks / lunch, private hire, events, gift cards. Contact details are invented for the demo.
+- Тёмный неон, сетка, глитч, спектр
+- RU / EN, мобильное меню
+- Блоки: обо мне, услуги, работы, форма + Discord `unsleptov`
+- В работах:
+  - Sydney Wide Roofing Co — [демо](https://thoriumsteinar.github.io/upgrade-sydney-wide-roofing-demo/) / [код](https://github.com/ThoriumSteinar/upgrade-sydney-wide-roofing-demo)
+  - UNSLEPTOV Restaurant & Bar — [демо](https://thoriumsteinar.github.io/unsleptov-restaurant/) / [код](https://github.com/ThoriumSteinar/unsleptov-restaurant)
