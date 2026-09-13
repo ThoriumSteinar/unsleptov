@@ -379,6 +379,11 @@ main,
   font-weight: 700;
 }
 
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
 .btn-acid {
   background: var(--acid);
   color: #05070b;

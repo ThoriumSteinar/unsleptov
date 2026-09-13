@@ -48,7 +48,9 @@ type Copy = {
     channel: string
     payload: string
     send: string
+    sending: string
     sent: string
+    error: string
   }
   footer: string
 }
@@ -141,15 +143,17 @@ const dict: Record<Lang, Copy> = {
     contact: {
       index: '04',
       title: 'канал',
-      lead: 'быстрее всего — Discord. Форма тоже доходит: скопирую бриф и покажу ник.',
-      discord: 'discord',
+      lead: 'быстрее всего — Discord или Telegram. Форма доходит до почты: заполни бриф, и я отвечу.',
+      discord: 'discord/telegram',
       copy: 'копировать ник',
       copied: 'скопировано',
       alias: 'алиас',
       channel: 'телеграм / почта',
       payload: 'что нужно собрать',
       send: 'transmit',
-      sent: 'сигнал принят. пиши в discord: unsleptov',
+      sending: 'отправка…',
+      sent: 'сигнал отправлен на unsleptov@gmail.com',
+      error: 'ошибка отправки. попробуй ещё раз.',
     },
     footer: 'unsleep protocol · local runtime',
   },
@@ -240,15 +244,17 @@ const dict: Record<Lang, Copy> = {
     contact: {
       index: '04',
       title: 'channel',
-      lead: 'Fastest path is Discord. The form still works: I’ll copy the brief and show the nick.',
-      discord: 'discord',
+      lead: 'Fastest path is Discord or Telegram. The form reaches my inbox: fill the brief and I’ll reply.',
+      discord: 'discord/telegram',
       copy: 'copy nick',
       copied: 'copied',
       alias: 'alias',
       channel: 'telegram / email',
       payload: 'what should we build',
       send: 'transmit',
-      sent: 'signal received. hit discord: unsleptov',
+      sending: 'sending…',
+      sent: 'signal sent to unsleptov@gmail.com',
+      error: 'failed to transmit. try again.',
     },
     footer: 'unsleep protocol · local runtime',
   },

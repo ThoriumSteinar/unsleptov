@@ -5,12 +5,16 @@ import { StatusBar } from './components/StatusBar'
 import { I18nProvider, useI18n } from './i18n'
 
 const DISCORD = 'unsleptov'
+const EMAIL = 'unsleptov@gmail.com'
+const FORM_ENDPOINT = `https://formsubmit.co/ajax/${EMAIL}`
 
 function Site() {
   const { t } = useI18n()
   const [bootLine, setBootLine] = useState(0)
   const [copied, setCopied] = useState(false)
+  const [sending, setSending] = useState(false)
   const [sent, setSent] = useState(false)
+  const [error, setError] = useState(false)
   const [alias, setAlias] = useState('')
   const [channel, setChannel] = useState('')
   const [payload, setPayload] = useState('')
@@ -33,18 +37,33 @@ function Site() {
 
   async function onSubmit(e: FormEvent) {
     e.preventDefault()
-    const brief = [
-      `alias: ${alias || '—'}`,
-      `channel: ${channel || '—'}`,
-      `payload: ${payload || '—'}`,
-      `discord: ${DISCORD}`,
-    ].join('\n')
+    setSending(true)
+    setError(false)
     try {
-      await navigator.clipboard.writeText(brief)
+      const res = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          alias: alias || '—',
+          channel: channel || '—',
+          payload: payload || '—',
+          _subject: `UNSLEPTOV ping from ${alias || 'anonymous'}`,
+          _replyto: channel,
+        }),
+      })
+      if (!res.ok) throw new Error('FormSubmit failed')
+      setSent(true)
+      setAlias('')
+      setChannel('')
+      setPayload('')
     } catch {
-      /* local-only: clipboard may be blocked */
+      setError(true)
+    } finally {
+      setSending(false)
     }
-    setSent(true)
   }
 
   return (
@@ -206,9 +225,10 @@ function Site() {
                 {t.contact.payload}
                 <textarea value={payload} onChange={(e) => setPayload(e.target.value)} name="payload" rows={4} />
               </label>
-              <button className="btn btn-acid" type="submit">
-                {t.contact.send}
+              <button className="btn btn-acid" type="submit" disabled={sending}>
+                {sending ? t.contact.sending : t.contact.send}
               </button>
+              {error ? <p className="sent" style={{ color: 'var(--magenta)' }}>{t.contact.error}</p> : null}
               {sent ? <p className="sent">{t.contact.sent}</p> : null}
             </form>
           </div>
