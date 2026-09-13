@@ -21,3 +21,4 @@ npm run dev
 - В работах:
   - Sydney Wide Roofing Co — [демо](https://thoriumsteinar.github.io/upgrade-sydney-wide-roofing-demo/) / [код](https://github.com/ThoriumSteinar/upgrade-sydney-wide-roofing-demo)
   - UNSLEPTOV Restaurant & Bar — [демо](https://thoriumsteinar.github.io/unsleptov-restaurant/) / [код](https://github.com/ThoriumSteinar/unsleptov-restaurant)
+  - UNSLEPTOV Grill (eatbu-style) — [демо](https://thoriumsteinar.github.io/unsleptov-restaurant-bar/) / [код](https://github.com/ThoriumSteinar/unsleptov-restaurant-bar)
