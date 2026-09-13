@@ -273,7 +273,7 @@ type Ctx = {
 const I18nContext = createContext<Ctx | null>(null)
 
 export function I18nProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Lang>('ru')
+  const [lang, setLang] = useState<Lang>('en')
 
   useEffect(() => {
     document.documentElement.lang = lang

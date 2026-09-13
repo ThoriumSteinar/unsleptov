@@ -173,18 +173,11 @@ function Site() {
                   <h3>{item.name}</h3>
                   <p>{item.text}</p>
                   <p className="stack">{item.stack}</p>
-                  {item.live || item.repo ? (
+                  {item.live ? (
                     <div className="release-links">
-                      {item.live ? (
-                        <a className="btn btn-acid" href={item.live} target="_blank" rel="noreferrer">
-                          {t.work.openLive}
-                        </a>
-                      ) : null}
-                      {item.repo ? (
-                        <a className="btn btn-ghost" href={item.repo} target="_blank" rel="noreferrer">
-                          {t.work.openCode}
-                        </a>
-                      ) : null}
+                      <a className="btn btn-acid" href={item.live} target="_blank" rel="noreferrer">
+                        {t.work.openLive}
+                      </a>
                     </div>
                   ) : null}
                 </div>
