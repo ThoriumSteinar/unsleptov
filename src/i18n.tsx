@@ -107,7 +107,7 @@ const dict: Record<Lang, Copy> = {
     work: {
       index: '03',
       title: 'релизы',
-      lead: 'три живых кейса: AU-редизайн, grill-бар и ресторан eatbu-style. один слот под следующий сайт и приложение.',
+      lead: 'три живых кейса: кофейня, grill-бар и ресторан eatbu-style. один слот под следующий сайт и приложение.',
       pending: 'ожидает сигнал',
       live: 'online',
       openLive: 'открыть демо',
@@ -115,12 +115,12 @@ const dict: Record<Lang, Copy> = {
       items: [
         {
           id: '01',
-          tag: 'REDESIGN',
-          name: 'SYDNEY.WIDE',
-          text: 'Полный редизайн Sydney Wide Roofing Co: сланец и медь, editorial-сетка, форма заявки на первом плане, услуги и район. Портфолио-демо, не прод.',
+          tag: 'CAFE',
+          name: 'UNSLEPTOV.CAFE',
+          text: 'Кофейня в Киеве для друзей и ноутбука: тёплый зал, напитки, короткое меню и как найти дверь. Контакты вымышлены, портфолио-демо.',
           stack: 'TypeScript · React · GH Pages',
-          live: 'https://thoriumsteinar.github.io/upgrade-sydney-wide-roofing-demo/',
-          repo: 'https://github.com/ThoriumSteinar/upgrade-sydney-wide-roofing-demo',
+          live: 'https://thoriumsteinar.github.io/unsleptov-vila-alice/',
+          repo: 'https://github.com/ThoriumSteinar/unsleptov-vila-alice',
         },
         {
           id: '02',
@@ -217,7 +217,7 @@ const dict: Record<Lang, Copy> = {
     work: {
       index: '03',
       title: 'releases',
-      lead: 'three live cases: AU redesign, grill bar, and an eatbu-style restaurant. one slot for the next site and app.',
+      lead: 'three live cases: a coffee shop, a grill bar, and an eatbu-style restaurant. one slot for the next site and app.',
       pending: 'awaiting signal',
       live: 'online',
       openLive: 'open demo',
@@ -225,12 +225,12 @@ const dict: Record<Lang, Copy> = {
       items: [
         {
           id: '01',
-          tag: 'REDESIGN',
-          name: 'SYDNEY.WIDE',
-          text: 'Full redesign of Sydney Wide Roofing Co: slate and copper, editorial grid, quote form up front, services and a sample region. Portfolio demo, not production.',
+          tag: 'CAFE',
+          name: 'UNSLEPTOV.CAFE',
+          text: 'A Kyiv coffee shop for friends and a laptop: warm room, signature drinks, a short menu, and how to find the door. Fictional contacts, portfolio demo.',
           stack: 'TypeScript · React · GH Pages',
-          live: 'https://thoriumsteinar.github.io/upgrade-sydney-wide-roofing-demo/',
-          repo: 'https://github.com/ThoriumSteinar/upgrade-sydney-wide-roofing-demo',
+          live: 'https://thoriumsteinar.github.io/unsleptov-vila-alice/',
+          repo: 'https://github.com/ThoriumSteinar/unsleptov-vila-alice',
         },
         {
           id: '02',
